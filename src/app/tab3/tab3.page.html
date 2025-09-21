@@ -1,17 +1,136 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 3
+      Kegiatan Harian
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <!-- Tombol Aktivitas Utama -->
+  <div style="padding: 16px;">
+    <h3>Aktivitas Pagi</h3>
+    <ion-button expand="block" color="success">
+      <ion-icon slot="start" name="sunny"></ion-icon>
+      Bangun Tidur
+    </ion-button>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+    <ion-button expand="block" color="primary">
+      <ion-icon slot="start" name="fitness"></ion-icon>
+      Olahraga Pagi
+    </ion-button>
+
+    <ion-button expand="block" color="warning">
+      <ion-icon slot="start" name="restaurant"></ion-icon>
+      Sarapan
+    </ion-button>
+
+    <h3 style="margin-top: 24px;">Aktivitas Siang</h3>
+    <ion-button expand="block" color="tertiary">
+      <ion-icon slot="start" name="briefcase"></ion-icon>
+      Kerja/Belajar
+    </ion-button>
+
+    <ion-button expand="block" color="secondary">
+      <ion-icon slot="start" name="cafe"></ion-icon>
+      Makan Siang
+    </ion-button>
+
+    <h3 style="margin-top: 24px;">Aktivitas Sore</h3>
+    <ion-button expand="block" color="medium">
+      <ion-icon slot="start" name="walk"></ion-icon>
+      Jalan Santai
+    </ion-button>
+
+    <ion-button expand="block" color="danger">
+      <ion-icon slot="start" name="heart"></ion-icon>
+      Me Time
+    </ion-button>
+
+    <h3 style="margin-top: 24px;">Aktivitas Malam</h3>
+    <ion-button expand="block" color="dark">
+      <ion-icon slot="start" name="moon"></ion-icon>
+      Makan Malam
+    </ion-button>
+
+    <ion-button expand="block" color="light">
+      <ion-icon slot="start" name="bed"></ion-icon>
+      Tidur
+    </ion-button>
+  </div>
+
+  <!-- Status Kegiatan dengan Chips -->
+  <div style="padding: 16px;">
+    <h3>Status Hari Ini</h3>
+    <ion-chip color="success">
+      <ion-icon name="checkmark-circle"></ion-icon>
+      <ion-label>Selesai</ion-label>
+    </ion-chip>
+
+    <ion-chip color="warning">
+      <ion-icon name="time"></ion-icon>
+      <ion-label>Sedang Berjalan</ion-label>
+    </ion-chip>
+
+    <ion-chip color="danger" [outline]="true">
+      <ion-icon name="close-circle"></ion-icon>
+      <ion-label>Belum Dimulai</ion-label>
+    </ion-chip>
+
+    <ion-chip [disabled]="true">
+      <ion-icon name="pause-circle"></ion-icon>
+      <ion-label>Ditunda</ion-label>
+    </ion-chip>
+  </div>
+
+  <!-- Tombol Aksi Cepat -->
+  <div style="padding: 16px;">
+    <h3>Aksi Cepat</h3>
+    <div style="display: flex; gap: 8px; justify-content: space-around;">
+      <ion-button size="small" fill="outline">
+        <ion-icon slot="icon-only" name="timer"></ion-icon>
+      </ion-button>
+
+      <ion-button size="small" fill="outline">
+        <ion-icon slot="icon-only" name="alarm"></ion-icon>
+      </ion-button>
+
+      <ion-button size="small" fill="outline">
+        <ion-icon slot="icon-only" name="calendar"></ion-icon>
+      </ion-button>
+
+      <ion-button size="small" fill="outline">
+        <ion-icon slot="icon-only" name="list"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+
+  <!-- Floating Action Button untuk Tambah Kegiatan -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="primary">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button color="success">
+        <ion-icon name="alarm"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="warning">
+        <ion-icon name="list"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="danger">
+        <ion-icon name="heart"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <!-- Jadwal Hari Ini -->
+  <div style="padding: 16px;">
+    <h3>Jadwal Hari Ini</h3>
+    <ion-datetime
+      presentation="time"
+      [showDefaultButtons]="true"
+      placeholder="Pilih waktu kegiatan">
+    </ion-datetime>
+  </div>
+
 </ion-content>

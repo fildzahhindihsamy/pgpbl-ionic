@@ -1,17 +1,85 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Jadwal Kuliah
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-accordion-group #accordionGroup>
+  <ion-accordion value="first">
+    <ion-item slot="header" color="light">
+      <ion-label>Senin</ion-label>
+    </ion-item>
+    <div class="ion-padding" slot="content">
+      <ion-item>
+        <ion-label>
+        <h2>PGPBL</h2>
+        <p>Praktikum Pemrograman Geospasial Perangkat Bergerak Lanjut</p>
+        </ion-label>
+      </ion-item>
+      </div>
+    <div class="ion-padding" slot="content">
+      <ion-item>
+        <ion-label>
+        <h2>Metopen</h2>
+        <p>Metode Penelitian</p>
+        </ion-label>
+      </ion-item>
+      </div>
+  </ion-accordion>
+  <ion-accordion value="second">
+    <ion-item slot="header" color="light">
+      <ion-label>Selasa</ion-label>
+    </ion-item>
+    <div class="ion-padding" slot="content">
+      <ion-item>
+        <ion-label>
+        <h2>PP</h2>
+        <p>Pendidikan Pancasila</p>
+        </ion-label>
+      </ion-item>
+      </div>
+  </ion-accordion>
+  <ion-accordion value="third">
+    <ion-item slot="header" color="light">
+      <ion-label>Rabu</ion-label>
+    </ion-item>
+    <div class="ion-padding" slot="content">
+      <ion-item>
+        <ion-label>
+        <h2>SDGL</h2>
+        <p>Praktikum Sains Data Geospasial</p>
+        </ion-label>
+      </ion-item>
+      </div>
+  </ion-accordion>
+  <ion-accordion value="fourth">
+    <ion-item slot="header" color="light">
+      <ion-label>Kamis</ion-label>
+    </ion-item>
+    <div class="ion-padding" slot="content">
+      <ion-item>
+        <ion-label>
+        <h2>SDA</h2>
+        <p>Praktikum Aplikasi SIG untuk Sumber Daya Air</p>
+        </ion-label>
+      </ion-item>
+      </div>
+  </ion-accordion>
+  <ion-accordion value="fifthy">
+    <ion-item slot="header" color="light">
+      <ion-label>Jumat</ion-label>
+    </ion-item>
+    <div class="ion-padding" slot="content">
+      <ion-item>
+        <ion-label>
+        <h2>PPK</h2>
+        <p>Praktikum Aplikasi SIG untuk Perairan dan Kelautan</p>
+        </ion-label>
+      </ion-item>
+      </div>
+  </ion-accordion>
+</ion-accordion-group>
 </ion-content>
