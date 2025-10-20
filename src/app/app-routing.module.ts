@@ -28,6 +28,10 @@ const routes: Routes = [
   {
     path: 'createpoint',
     loadChildren: () => import('./createpoint/createpoint.module').then( m => m.CreatepointPageModule)
+  },
+  {
+    path: 'edit-point/:key',
+    loadChildren: () => import('./app/edit-point/edit-point.module').then( m => m.EditPointPageModule)
   }
 
 

@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Edit Point</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="editPointForm" (ngSubmit)="updatePoint()">
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input formControlName="name"></ion-input>
+    </ion-item>
+    <ion-button type="submit" expand="block" [disabled]="!editPointForm.valid">Update Point</ion-button>
+  </form>
+</ion-content>
